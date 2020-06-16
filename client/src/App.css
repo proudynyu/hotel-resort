@@ -1,0 +1,35 @@
+:root {
+  --primaryColor: #af9a7d;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBlack: #222;
+  --mainGray: #ececec;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 3px;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShardom: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--mainBlack);
+  transition: var(--mainTransition);
+  letter-spacing: var(--mainSpacing);
+  background-color: var(--primaryColor);
+  padding: 0.4rem 0.9rem;
+  border: 3px solid var(--primaryColor);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--primaryColor);
+}
