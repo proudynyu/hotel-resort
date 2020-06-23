@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Error from '../Error';
 import { StyledHero } from '../../components/Hero'
 import Banner from '../../components/Banner';
+import './styles.css'
 
 const SingleRoom = () => {
     const { rooms, slug } = useContext(RoomContext);

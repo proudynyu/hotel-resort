@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-import Home from '../components/Home';
+import Home from '../layout/Home';
 import Rooms from '../components/Rooms';
-import SingleRoom from '../components/SingleRoom';
+import SingleRoom from '../layout/SingleRoom';
 import Error from '../components/Error';
 import { RoomProvider } from '../context';
 

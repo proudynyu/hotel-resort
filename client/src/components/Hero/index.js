@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container } from './style';
 import './styles.css'
 
 const Hero = ({ children, hero="defaultHero" }) => {
@@ -9,5 +10,15 @@ const Hero = ({ children, hero="defaultHero" }) => {
   )
 }
 
+const StyledHero = ({ children, img }) => {
+  return (
+    <Container img={ img }>
+      { children }
+    </Container>
+  )
+}
 
-export default Hero;
+export {
+  Hero,
+  StyledHero
+};

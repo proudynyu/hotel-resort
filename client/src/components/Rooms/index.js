@@ -1,5 +1,5 @@
 import React from 'react';
-import Hero from '../Hero';
+import { Hero } from '../Hero';
 import Banner from '../Banner';
 import { Link } from 'react-router-dom';
 
