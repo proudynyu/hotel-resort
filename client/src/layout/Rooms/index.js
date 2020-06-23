@@ -1,18 +1,12 @@
-import React, { useContext, useEffect } from 'react';
-import { RoomContext } from '../../context';
+import React from 'react';
 import { Hero } from '../../components/Hero';
 import Title from '../../components/ServicesComp/title';
 import RoomContainer from '../../components/RoomContainer'
 import Banner from '../../components/Banner';
 import { Link } from 'react-router-dom';
+import { Container } from './styles';
 
 const Rooms = () => {
-    const { rooms } = useContext(RoomContext);
-
-    useEffect(() => {
-
-    })
-
     return (
         <div>
             <Hero hero="roomsHero">
@@ -23,10 +17,10 @@ const Rooms = () => {
                     </Link>
                 </Banner>
             </Hero>
-            <section className="rooms">
+            <Container>
                 <Title title="Our rooms"/>
                 <RoomContainer />
-            </section>
+            </Container>
         </div>
     )
 }

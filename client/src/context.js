@@ -6,20 +6,29 @@ const RoomContext = createContext();
 const RoomProvider = ({ children }) => {
   const [rooms, setRooms] = useState([]);
   const [slug, setSlug] = useState('');
-  // const [sortedRooms, setSortedRooms] = useState([]);
   const [featuredRooms, setFeaturedRooms] = useState([]);
-  // const [loading, setLoading] = useState(true);
-
+  const [sorted, setSorted] = useState([]);
+ 
   useEffect(() => {
     api.get('api/v1/rooms').then( resp => {
       setRooms(resp.data);
+      setSorted(resp.data);
       const featured = resp.data.filter(room => room.name.includes('deluxe'))
       setFeaturedRooms(featured);
     });
   }, []);
 
+
   return (
-    <RoomContext.Provider value={{ rooms, featuredRooms, setSlug, slug }}>
+    <RoomContext.Provider value={{ 
+      rooms, 
+      featuredRooms, 
+      setSlug, 
+      slug,
+      sorted,
+      setSorted,
+    }}>
+
       { children }
     </RoomContext.Provider>
   );

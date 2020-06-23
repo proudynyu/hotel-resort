@@ -1,18 +1,28 @@
-import React, { useEffect, useState, useContext} from 'react';
-import RoomFilter from './RoomFilter'
-import RoomList from './RoomList';
-import RoomComp from '../RoomComp';
+import React, { useContext }from 'react';
 import { RoomContext } from '../../context';
+import RoomComp from '../RoomComp';
+import Filter from '../Filter';
+import { Grid, Container } from './styles';
 
 const RoomContainer = () => {
-  const { rooms } = useContext(RoomContext);
-  const [sorted, setSorted] = useState([]);
-
+  const { rooms, sorted } = useContext(RoomContext);
   return (
-    <div>
-      <RoomFilter />
-      <RoomList rooms={rooms}/>
-    </div>
+    <Container>
+      <Filter rooms={rooms}/>
+
+      <Grid>
+      { sorted.map(room => (
+        <RoomComp 
+        key={room.id}
+        price={room.price}
+        images={room.images}
+        name={room.name}
+        slug={room.slug}
+      />
+      ))}
+    </Grid>
+
+  </Container>
   )
 }
 
