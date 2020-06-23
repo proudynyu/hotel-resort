@@ -1,10 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
 import Home from '../layout/Home';
-import Rooms from '../components/Rooms';
+import Rooms from '../layout/Rooms';
 import SingleRoom from '../layout/SingleRoom';
-import Error from '../components/Error';
+import Error from '../layout/Error';
 import { RoomProvider } from '../context';
 
 const Router = () => {
